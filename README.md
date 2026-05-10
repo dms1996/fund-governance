@@ -38,7 +38,7 @@ Single-file knowledge platform with 10 parts and 38 chapters:
 | IX | Professional Development and Certifications |
 | X | Integrated Case Study and Glossary |
 
-### Simulation Data (17 CSVs + 1 Excel)
+### Simulation Data (17 CSVs)
 
 Realistic datasets for 6 fictitious funds managed by Capital Management Co.:
 
@@ -66,8 +66,6 @@ fund-governance/
 |-- index.html                     Entry point (redirects to BA Guide)
 |-- guide.html                     BA reference guide (bilingual)
 |-- tutorial.html                  Interactive tutorial (bilingual)
-|-- Fund_Governance_Data_Template.xlsx
-|
 |-- 01-Fund-Setup/                 Fund register, structure overview, setup checklist
 |-- 02-NAV-Reconciliation/         Daily NAV reports, breaks log, reconciliation SQL
 |-- 03-Compliance-Monitoring/      Compliance checklist, AML/KYC tracker, breaches log
@@ -99,7 +97,7 @@ fund-governance/
 - **HTML/CSS/JS** -- Single-file applications, no external dependencies
 - **SQL** (T-SQL syntax) -- Data validation and reporting queries
 - **Python 3.8+** -- Automation scripts using pandas and numpy
-- **CSV/Excel** -- Simulated datasets
+- **CSV** -- Simulated datasets
 
 ---
 

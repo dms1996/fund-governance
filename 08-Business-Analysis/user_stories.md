@@ -157,7 +157,7 @@
 - Report is auto-generated at a configurable time (default 10:00 CET) each business day.
 - Report lists all six funds with: match status, number of breaks by severity, number of open vs. resolved breaks, and overall reconciliation outcome (Pass/Fail).
 - Report is available on the dashboard and distributed via email to a configurable recipient list.
-- Report is exportable in PDF and Excel formats.
+- Report is exportable in PDF format.
 - Report includes a comparison to the previous business day to highlight new or recurring breaks.
 
 **Priority:** Must Have | **Story Points:** 5

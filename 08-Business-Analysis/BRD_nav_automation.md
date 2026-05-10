@@ -211,7 +211,7 @@ The current manual NAV reconciliation process presents the following challenges:
   - Daily report lists all funds with match status, break counts, and resolution status.
   - Weekly report includes trend analysis and aging of open breaks.
   - Monthly report provides executive summary suitable for board pack inclusion.
-  - Reports are exportable in PDF and Excel formats.
+  - Reports are exportable in PDF format.
 
 ### FR-010: Full Audit Trail
 
@@ -271,7 +271,7 @@ The current manual NAV reconciliation process presents the following challenges:
 
 ### 9.2 Data Flows
 
-**Current State**: Administrator sends NAV file via SFTP. Fund accounting staff manually download, open in Excel, compare against Fund Accounting System export, and document results in a shared spreadsheet.
+**Current State**: Administrator sends NAV file via SFTP. Fund accounting staff manually download, compare against Fund Accounting System export, and document results in a shared spreadsheet.
 
 **Future State**: System automatically retrieves administrator files from SFTP and extracts Fund Accounting System data via API. Reconciliation engine compares data sets, applies tolerance rules, and publishes results to the dashboard. Breaks trigger automated alerts. All actions are logged.
 
@@ -283,10 +283,10 @@ The current manual NAV reconciliation process presents the following challenges:
 
 1. Fund administrator publishes NAV data to SFTP (by 08:30 CET).
 2. Fund accounting analyst manually downloads file (08:30 - 09:00).
-3. Analyst exports Fund Accounting System data to Excel (09:00 - 09:30).
+3. Analyst exports Fund Accounting System data to CSV (09:00 - 09:30).
 4. Analyst manually compares NAV per share, total NAV, and key positions (09:30 - 11:00).
 5. Discrepancies are investigated via email with the administrator (11:00 - 12:00).
-6. Results are documented in a shared Excel workbook (12:00 - 12:30).
+6. Results are documented in a shared CSV file (12:00 - 12:30).
 7. Summary email is sent to Head of Fund Operations (12:30).
 
 **Total elapsed time**: approximately 4 hours. **Manual effort**: approximately 3 hours.
