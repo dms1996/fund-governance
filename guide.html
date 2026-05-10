@@ -1957,8 +1957,8 @@
         <div class="header-left">
             <button class="menu-toggle" data-action="toggle-sidebar" aria-label="Menu">&#9776;</button>
             <div class="nav-tabs">
-                <a href="index.html" class="nav-tab">Interactive Tutorial</a>
                 <a href="guide.html" class="nav-tab active">BA Guide</a>
+                <a href="tutorial.html" class="nav-tab">Interactive Tutorial</a>
             </div>
         </div>
         <div class="header-controls">
@@ -9127,11 +9127,6 @@
     <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 dms1996</p>
-        <div class="footer-lang" id="footerLang">
-            <span class="footer-lang-opt active" id="langEN" data-action="set-lang" data-lang="en">English</span>
-            <span class="footer-lang-sep">|</span>
-            <span class="footer-lang-opt" id="langPT" data-action="set-lang" data-lang="pt">Português</span>
-        </div>
     </footer>
 
     <!-- Search Results Panel -->
@@ -10099,10 +10094,9 @@
                 return State.get('lang');
             },
 
-            /** Restore saved language from localStorage (defaults to EN). */
+            /** Always open in English. */
             restore: function() {
-                const saved = localStorage.getItem('ba-guide-lang');
-                const target = (saved === 'pt') ? 'pt' : 'en';
+                const target = 'en';
                 // Force-apply even if same as default to ensure UI is initialized
                 var langEN = $('langEN');
                 var langPT = $('langPT');

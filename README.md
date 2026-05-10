@@ -8,7 +8,7 @@ A comprehensive, bilingual (EN/PT) learning platform for Business Analysts worki
 
 ## What's Included
 
-### Interactive Tutorial (`index.html`)
+### Interactive Tutorial (`tutorial.html`)
 
 Step-by-step simulation of a Fund Governance Analyst's working day, covering:
 
@@ -63,9 +63,9 @@ Realistic datasets for 6 fictitious funds managed by Capital Management Co.:
 ```
 fund-governance/
 |
-|-- index.html                     Interactive tutorial (bilingual)
+|-- index.html                     Entry point (redirects to BA Guide)
 |-- guide.html                     BA reference guide (bilingual)
-|-- info.md                        Detailed workflow guide (PT)
+|-- tutorial.html                  Interactive tutorial (bilingual)
 |-- Fund_Governance_Data_Template.xlsx
 |
 |-- 01-Fund-Setup/                 Fund register, structure overview, setup checklist
@@ -84,7 +84,7 @@ fund-governance/
 
 ## Features
 
-- **Bilingual** -- full content in English and Portuguese with instant toggle
+- **Bilingual** -- full content in English and Portuguese
 - **Dark mode** -- persistent via localStorage
 - **Interactive activities** -- editable tables, drag-drop, quizzes, decision engine, fee calculator, email composer
 - **Scoring system** -- tracks progress across all activities with category breakdown
