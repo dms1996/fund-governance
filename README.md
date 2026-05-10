@@ -2,7 +2,7 @@
 
 A comprehensive, bilingual (EN/PT) learning platform for Business Analysts working in Fund Governance. Combines an interactive simulation of a real working day with an in-depth reference guide covering regulatory frameworks, ManCo operations, risk management and career development.
 
-**Live version:** [https://dms1996.github.io/fund-governance/](https://dms1996.github.io/fund-governance/)
+**Live version:** [https://diogomserino.github.io/fund-governance/](https://diogomserino.github.io/fund-governance/)
 
 ---
 
