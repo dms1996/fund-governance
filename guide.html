@@ -7,6 +7,7 @@
     <meta name="description" content="Comprehensive bilingual study guide for Business Analysts in Fund Governance — covering UCITS, AIFs, regulatory frameworks, ManCo operations, risk management and compliance.">
     <meta name="theme-color" content="#3b82f6">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563eb'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='700' font-size='15' fill='white'>FG</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1233,33 +1234,6 @@
         }
 
         .site-footer p { margin: 0; }
-
-        .footer-lang {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 10px;
-        }
-
-        .footer-lang-opt {
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .footer-lang-opt:hover {
-            color: var(--text);
-        }
-
-        .footer-lang-opt.active {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        .footer-lang-sep {
-            color: var(--border-light);
-            font-size: 9px;
-        }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
@@ -10097,11 +10071,6 @@
             /** Always open in English. */
             restore: function() {
                 const target = 'en';
-                // Force-apply even if same as default to ensure UI is initialized
-                var langEN = $('langEN');
-                var langPT = $('langPT');
-                if (langEN) langEN.classList.toggle('active', target === 'en');
-                if (langPT) langPT.classList.toggle('active', target === 'pt');
                 document.documentElement.setAttribute('lang', target);
                 document.body.setAttribute('data-active-lang', target);
                 if (target !== State.get('lang')) State.set('lang', target);
@@ -10112,11 +10081,6 @@
                 State.onChange('lang', function(lang) {
                     document.documentElement.setAttribute('lang', lang);
                     document.body.setAttribute('data-active-lang', lang);
-                    var langEN = $('langEN');
-                    var langPT = $('langPT');
-                    if (langEN) langEN.classList.toggle('active', lang === 'en');
-                    if (langPT) langPT.classList.toggle('active', lang === 'pt');
-                    localStorage.setItem('ba-guide-lang', lang);
                     // Rebuild language-dependent elements
                     setTimeout(function() {
                         Render.buildPartTOCs();

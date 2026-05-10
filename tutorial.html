@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fund Governance - Tutorial Interativo</title>
+    <title>Fund Governance — Interactive Tutorial</title>
+    <meta name="description" content="Interactive simulation of a Fund Governance Analyst's working day — NAV reconciliation, compliance, investor onboarding, fee validation and board reporting.">
+    <meta name="theme-color" content="#2563eb">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563eb'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='700' font-size='15' fill='white'>FG</text></svg>">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -277,34 +281,6 @@
             justify-content: space-between;
             padding: 0 16px;
             z-index: 100;
-        }
-
-        /* Footer Language Switcher */
-        .footer-lang {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 10px;
-        }
-
-        .footer-lang-opt {
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .footer-lang-opt:hover {
-            color: var(--text-primary);
-        }
-
-        .footer-lang-opt.active {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .footer-lang-sep {
-            color: var(--border-light);
-            font-size: 9px;
         }
 
         /* Side Nav Arrows */
@@ -4907,16 +4883,6 @@ Capital Management Co.</div>
             LangToggle.currentLang = target;
             LangToggle.apply('en');
             LangToggle.applyUI(target);
-            LangToggle.updateButtons();
-        },
-
-        setLang(lang) {
-            if (lang === LangToggle.currentLang) return;
-            LangToggle.currentLang = lang;
-            LangToggle.apply(lang);
-            LangToggle.applyUI(lang);
-            LangToggle.updateButtons();
-            localStorage.setItem('fg-lang', lang);
         },
 
         apply(lang) {
@@ -4931,15 +4897,6 @@ Capital Management Co.</div>
                     if (backup) els.forEach((el, i) => { if (i < backup.length) el.innerHTML = backup[i]; });
                 }
             });
-        },
-
-        updateButtons() {
-            const langEN = document.getElementById('langEN');
-            const langPT = document.getElementById('langPT');
-            if (langEN && langPT) {
-                langEN.classList.toggle('active', LangToggle.currentLang === 'en');
-                langPT.classList.toggle('active', LangToggle.currentLang === 'pt');
-            }
         },
 
         applyUI(lang) {
